@@ -193,6 +193,9 @@ def random_choice_or_none(songs: List[Song]) -> Optional[Song]:
     """Return a random song or None."""
     import random
 
+    #  Note: I believe the addition below by AI makes sense b/c it is doing a quick check of the list if it's empty.
+    if not songs:
+        return None 
     return random.choice(songs)
 
 
